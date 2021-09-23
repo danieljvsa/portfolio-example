@@ -104,15 +104,16 @@ input:focus {
                 align-items: center;
             }
 
-            button:focus~.menu {
+            /*button:focus~.menu {
                 height: auto !important;
-            }
+                
+            }*/
     
             .menu{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                
+                pointer-events: auto !important;
                 p{
                     font-weight: 400;
                     font-size: 24px;
@@ -504,9 +505,15 @@ input:focus {
         flex-direction: column !important;
         padding: 0 !important;
         align-items: flex-start !important;
+
         button{
             display: flex !important;
         }
+
+        .menu.active {
+            height: auto !important;
+        }
+
         .menu{
             overflow: hidden !important;
             text-align: center !important;
@@ -514,10 +521,15 @@ input:focus {
             width: 100% !important;
             margin: 0 !important;
             height: 0 !important;
+            
 
             p{
                 margin: 2rem 0 !important;
                 width: 100% !important;
+                
+                a{
+                    pointer-events: auto !important;
+                }
             }
         }
     }

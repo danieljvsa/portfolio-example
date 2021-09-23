@@ -84,6 +84,10 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin: 2.5rem 0;
+  /*button:focus~.menu {
+                height: auto !important;
+                
+            }*/
 }
 
 .container .container_header .logo h3 {
@@ -109,10 +113,6 @@ input:focus {
           align-items: center;
 }
 
-.container .container_header button:focus ~ .menu {
-  height: auto !important;
-}
-
 .container .container_header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,6 +123,7 @@ input:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  pointer-events: auto !important;
 }
 
 .container .container_header .menu p {
@@ -585,6 +586,9 @@ input:focus {
     display: -ms-flexbox !important;
     display: flex !important;
   }
+  .container_header .menu.active {
+    height: auto !important;
+  }
   .container_header .menu {
     overflow: hidden !important;
     text-align: center !important;
@@ -599,6 +603,9 @@ input:focus {
   .container_header .menu p {
     margin: 2rem 0 !important;
     width: 100% !important;
+  }
+  .container_header .menu p a {
+    pointer-events: auto !important;
   }
   .container_title {
     -webkit-box-orient: vertical !important;
